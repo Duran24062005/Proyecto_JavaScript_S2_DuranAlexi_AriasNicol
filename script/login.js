@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Limpia mensaje de error y opcionalmente redirige
         errorMessage.textContent = "";
-        alert("Datos guardados correctamente en localStorage");
+        // alert("Datos guardados correctamente en localStorage");
 
         // Ejemplo de redirección después de login
         window.location.href = "../pages/dashboard.html";
