@@ -107,4 +107,6 @@ El LMS se estructura en módulos funcionales claramente definidos, orientados a 
 
 📚 [Documentation](https://www.notion.so/Proyecto-JavaScript-24fc8fbeb55580f985b5e03be551219f?source=copy_link)
 
-🚀 [Figma Design](https://www.figma.com/design/NCKOCLfR4d44a5tAGWjOjn/Proyecto-JS-Alexi-Nicole-SmartLearn?node-id=0-1&t=OL4wY9jHAlal5RGC-1)
+📝 [Figma Design](https://www.figma.com/design/NCKOCLfR4d44a5tAGWjOjn/Proyecto-JS-Alexi-Nicole-SmartLearn?node-id=0-1&t=OL4wY9jHAlal5RGC-1)
+
+🚀 [Deploy](https://duran24062005.github.io/Proyecto_JavaScript_S2_DuranAlexi_AriasNicol/)
