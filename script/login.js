@@ -34,6 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // alert("Datos guardados correctamente en localStorage");
 
         // Ejemplo de redirección después de login
-        window.location.href = "../pages/dashboard.html";
+        window.location.href = "./pages/dashboard.html";
     });
 });
