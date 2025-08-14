@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
             userType: userType
         }));
 
+        // Limpia el input despues de recibir el dato
+        nameInput.value = "";
+
         // Limpia mensaje de error y opcionalmente redirige
         errorMessage.textContent = "";
         alert("Datos guardados correctamente en localStorage");
