@@ -57,7 +57,7 @@ p {
 label {
     display: block;
     margin-bottom: 5px;
-    color: gainsboro;
+    color: rgb(78, 76, 76);
 }
 
 input {
