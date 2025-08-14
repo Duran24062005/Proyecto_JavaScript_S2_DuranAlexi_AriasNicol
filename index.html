@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samrt Learn - Iniciar Sesión</title>
+    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="shortcut icon" href="./storage/img/smartlearnlogobackgroundless.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo">
+                <img src="./storage/img/smartlearnlogobackgroundless.png" alt="Samrt Learn Logo" class="logo-img">
+            </div>
+            <p>Inicie sesión en su cuenta para continuar</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="name">Nombre</label>
+                    <input type="name" id="inputName" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="userType">Tipo de Usuario</label>
+                    <select id="userType" required>
+                        <option value=""></option>
+                        <option value="estudent">Estudiante</option>
+                        <option value="teacher">Maestro</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div id="errorMessage" class="error-message" role="alert" aria-live="assertive"></div>
+                <button type="submit">Iniciar sesión</button>
+            </form>
+            <div class="links">
+                <a href="#" class="forgot-password">¿Olvidó su contraseña?</a>
+                <p>¿No tiene una cuenta? <a href="/login/register/index.register.html" class="register">Regístrese</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="./script/login.js"></script>
+</body>
+
+</html>
