@@ -1,4 +1,4 @@
-# Proyecto JavaScript S2 DuranAlexi 
+# Proyecto JavaScript S2 Alexi Duran & Nicole Arias
 
 ## Proyecto de Desarrollo de un LMS (Learning Management System)
 
