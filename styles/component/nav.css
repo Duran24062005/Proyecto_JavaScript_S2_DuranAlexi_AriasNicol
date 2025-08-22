@@ -1,50 +1,95 @@
+/* --- RESET --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* --- NAVBAR --- */
 .nav-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: rgba(101, 162, 173, 0.72);
+    padding: 0.5rem 1rem;
 }
 
 .img-nav-logo {
     width: 8rem;
 }
 
-/*Left Navegator*/
+/* Left section */
 .left-container {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     gap: 2rem;
 }
 
+/* Ocultar checkbox */
+.menu-hamburguer {
+    display: none;
+}
+
+/* Botón hamburguesa (el label) */
+.menu_hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+/* Lista de navegación */
 .list-nav-container {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
-.list-nav-container, .list-nav-items {
+.list-nav-container,
+.list-nav-items {
     list-style: none;
 }
 
 .list-nav-items a {
     text-decoration: none;
+    color: #000;
 }
 
-/*Profile section*/
+/* Profile section */
 .profile-container {
     display: flex;
-    justify-content: space-between;
     gap: 1rem;
     align-items: center;
     margin-right: 1rem;
 }
+
 .profile-img {
     width: 3rem;
     border-radius: 50%;
+    margin-top: -0.5rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .menu_hamburguer {
+        display: block; /* Mostrar el botón en móviles */
+    }
+
+    .list-nav-container {
+        position: absolute;
+        top: 4.5rem;
+        right: 1rem;
+        background: rgba(101, 162, 173, 0.95);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        border-radius: 8px;
+        gap: 1rem;
+        display: none; /* Oculto por defecto */
+    }
+
+    /* Cuando el checkbox está activado, mostrar menú */
+    .menu-hamburguer:checked ~ .list-nav-container {
+        display: flex;
+    }
 }
