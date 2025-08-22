@@ -2,15 +2,16 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const storedData = localStorage.getItem("userData");
+    const logoutButton = document.getElementById('logout');
+    const userData = JSON.parse(storedData);
 
-    if (!storedData) {
+    if (!userData.name && !userData.userType) {
         // Si no hay datos, podría redirigir al login
         alert("No hay datos de usuario, redirigiendo al login...");
-        window.location.href = "/login/index.html";
+        window.location.href = "/index.html";
         return;
     }
 
-    const userData = JSON.parse(storedData);
 
     // Muestra en consola
     console.log("Nombre:", userData.name);
@@ -19,4 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ejemplo: mostrar en el DOM
     document.getElementById("welcomeMessage").textContent =
         `Bienvenido ${userData.name} (${userData.userType})`;
+
+    logoutButton.addEventListener('click', function logout() {
+        localStorage.setItem("userData", JSON.stringify({
+            name: "",
+            userType: ""
+        }));
+        window.location.href = ".././index.html";
+    });
+
 });

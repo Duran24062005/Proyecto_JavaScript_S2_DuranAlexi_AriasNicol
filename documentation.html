@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - Proyecto LMS</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>LMS Project</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#overview" class="nav-link">Resumen</a>
+                    <a href="#scope" class="nav-link">Alcance</a>
+                    <a href="#modules" class="nav-link">Módulos</a>
+                    <a href="#tech" class="nav-link">Tecnologías</a>
+                    <a href="#delivery" class="nav-link">Entrega</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Sistema de Gestión del Aprendizaje</h1>
+                    <p class="hero-subtitle">Plataforma LMS moderna, funcional y adaptable para instituciones educativas</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <i class="fas fa-users"></i>
+                            <span>Multi-usuario</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsivo</span>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Escalable</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="dashboard-preview">
+                        <div class="preview-header">
+                            <div class="preview-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="preview-content">
+                            <div class="preview-sidebar"></div>
+                            <div class="preview-main">
+                                <div class="preview-cards">
+                                    <div class="preview-card"></div>
+                                    <div class="preview-card"></div>
+                                    <div class="preview-card"></div>
+                                </div>
+                                <div class="preview-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <div class="container">
+            <h2 class="section-title">Resumen del Proyecto</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Objetivo</h3>
+                    <p>Desarrollar un LMS moderno que integre herramientas de gestión educativa con una interfaz intuitiva y responsiva, simplificando la administración académica.</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h3>Usuarios</h3>
+                    <p>Sistema diseñado para múltiples perfiles: administradores, docentes y estudiantes, cada uno con funcionalidades específicas.</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <h3>Escalabilidad</h3>
+                    <p>Enfoque modular que permite escalar la plataforma conforme a nuevas necesidades, integrando tecnologías modernas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope Section -->
+    <section id="scope" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Alcance del Proyecto</h2>
+            <div class="scope-grid">
+                <div class="scope-column">
+                    <h3 class="scope-title included">
+                        <i class="fas fa-check-circle"></i>
+                        Incluye
+                    </h3>
+                    <ul class="scope-list">
+                        <li>Diseño y desarrollo de interfaz moderna</li>
+                        <li>Creación y gestión de cursos, docentes, módulos y lecciones</li>
+                        <li>Carga de contenidos multimedia (videos, PDFs, enlaces)</li>
+                        <li>Gestión de actividades evaluativas</li>
+                        <li>Sistema de retroalimentación y calificación</li>
+                        <li>Persistencia de datos usando localStorage</li>
+                    </ul>
+                </div>
+                <div class="scope-column">
+                    <h3 class="scope-title excluded">
+                        <i class="fas fa-times-circle"></i>
+                        No Incluye (Fase Inicial)
+                    </h3>
+                    <ul class="scope-list">
+                        <li>Integración con sistemas externos (CRMs, videollamadas)</li>
+                        <li>Aplicaciones móviles nativas</li>
+                        <li>Soporte multilingüe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section id="modules" class="section">
+        <div class="container">
+            <h2 class="section-title">Módulos del Sistema</h2>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-icon">📊</div>
+                    <h3>Dashboard Principal</h3>
+                    <p>Visualización resumida de estadísticas, accesos rápidos y gráficos dinámicos.</p>
+                    <ul>
+                        <li>Estadísticas de cursos activos</li>
+                        <li>Usuarios registrados</li>
+                        <li>Progreso general</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">📚</div>
+                    <h3>Gestión de Cursos</h3>
+                    <p>Creación y edición de cursos con categorías, descripciones y asignación de docentes.</p>
+                    <ul>
+                        <li>Creación y edición de cursos</li>
+                        <li>Asignación de docentes</li>
+                        <li>Filtros por estado y fecha</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">👨‍🏫</div>
+                    <h3>Gestión de Docentes</h3>
+                    <p>Registro y administración de docentes con seguimiento de carga académica.</p>
+                    <ul>
+                        <li>Registro y edición</li>
+                        <li>Asignación de cursos</li>
+                        <li>Panel de desempeño</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">👩‍🎓</div>
+                    <h3>Gestión de Estudiantes</h3>
+                    <p>Inscripción y seguimiento individual por curso y actividades.</p>
+                    <ul>
+                        <li>Inscripción de estudiantes</li>
+                        <li>Seguimiento individual</li>
+                        <li>Estado de actividades</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">📂</div>
+                    <h3>Lecciones y Contenidos</h3>
+                    <p>Estructuración de módulos de aprendizaje con contenidos multimedia.</p>
+                    <ul>
+                        <li>Subida de contenidos</li>
+                        <li>Estado de visibilidad</li>
+                        <li>Ordenamiento de lecciones</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">✅</div>
+                    <h3>Tareas y Evaluaciones</h3>
+                    <p>Creación de tareas con fechas límite, rúbricas y sistema de calificación.</p>
+                    <ul>
+                        <li>Creación de tareas</li>
+                        <li>Evaluaciones tipo test</li>
+                        <li>Sistema de retroalimentación</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">⚙️</div>
+                    <h3>Configuración del Sistema</h3>
+                    <p>Personalización de la plataforma y configuración de parámetros.</p>
+                    <ul>
+                        <li>Personalización visual</li>
+                        <li>Configuración de parámetros</li>
+                        <li>Integración JSON-Server</li>
+                    </ul>
+                </div>
+                <div class="module-card">
+                    <div class="module-icon">🔧</div>
+                    <h3>Módulo Administrador</h3>
+                    <p>Interfaces de usuario para la gestión completa de la información.</p>
+                    <ul>
+                        <li>Gestión de cursos</li>
+                        <li>Administración de estudiantes</li>
+                        <li>Control de contenidos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="tech" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Tecnologías Permitidas</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <p>Estructura semántica y moderna</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <p>Estilos avanzados y responsivos</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-js-square"></i>
+                    <h3>JavaScript</h3>
+                    <p>Interactividad y funcionalidad</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fab fa-bootstrap"></i>
+                    <h3>Bootstrap</h3>
+                    <p>Framework CSS para diseño rápido</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-database"></i>
+                    <h3>JSON-Server</h3>
+                    <p>API REST simulada para desarrollo</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Mock API</h3>
+                    <p>Alternativa para persistencia de datos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="section">
+        <div class="container">
+            <h2 class="section-title">Condiciones de Entrega</h2>
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <i class="fab fa-github"></i>
+                    <h3>Repositorio</h3>
+                    <p>Enlace de repositorio privado con todo el código fuente del proyecto</p>
+                </div>
+                <div class="delivery-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Base de Datos</h3>
+                    <p>Archivo db contenedor de toda la información almacenada</p>
+                </div>
+                <div class="delivery-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Documentación</h3>
+                    <p>Documentación completa del proyecto en archivo README</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>LMS Project</span>
+                    </div>
+                    <p>Sistema de Gestión del Aprendizaje moderno y escalable</p>
+                </div>
+                <div class="footer-right">
+                    <p>&copy; 2024 Proyecto LMS. Documentación técnica.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
