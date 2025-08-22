@@ -50,6 +50,13 @@
     list-style: none;
 }
 
+.list-nav-container,
+.list-nav-items:hover {
+    padding: 2px;
+    border-radius: 5px;
+    background-color: gray;
+}
+
 .list-nav-items a {
     text-decoration: none;
     color: #000;
@@ -67,6 +74,20 @@
     width: 3rem;
     border-radius: 50%;
     margin-top: -0.5rem;
+}
+
+.profile-btn {
+    border: 1px solid black;
+    padding: 2px;
+    border-radius: 8px;
+    height: 25px;
+    background-color: #7187cf;
+}
+
+.img-profile-btn {
+    position: relative;
+    width: 1rem;
+    margin-top: -8px;
 }
 
 /* --- RESPONSIVE --- */
