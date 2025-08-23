@@ -4,3 +4,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.card {
+    box-shadow: -10px 0 10px;
+}
