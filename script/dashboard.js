@@ -2,7 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const storedData = localStorage.getItem("userData");
-    const logoutButton = document.getElementById('logout');
     const userData = JSON.parse(storedData);
 
     if (!userData.name && !userData.userType) {
@@ -20,13 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ejemplo: mostrar en el DOM
     document.getElementById("welcomeMessage").textContent =
         `Bienvenido ${userData.name} (${userData.userType})`;
-
-    logoutButton.addEventListener('click', function logout() {
-        localStorage.setItem("userData", JSON.stringify({
-            name: "",
-            userType: ""
-        }));
-        window.location.href = ".././index.html";
-    });
 
 });

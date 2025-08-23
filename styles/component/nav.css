@@ -40,7 +40,7 @@
 .list-nav-container {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
     align-items: center;
     transition: all 0.3s ease-in-out;
 }
@@ -50,11 +50,10 @@
     list-style: none;
 }
 
-.list-nav-container,
 .list-nav-items:hover {
-    padding: 2px;
     border-radius: 5px;
     background-color: gray;
+    color: white;
 }
 
 .list-nav-items a {
@@ -76,7 +75,7 @@
     margin-top: -0.5rem;
 }
 
-.profile-btn {
+.profile_btn {
     border: 1px solid black;
     padding: 2px;
     border-radius: 8px;
@@ -88,6 +87,49 @@
     position: relative;
     width: 1rem;
     margin-top: -8px;
+}
+
+/*Modal Profile and Logout*/
+.user-settings {
+    position: fixed;
+    margin-top: 10rem;
+    margin-left: 4rem;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #fff;
+    display: none;
+}
+
+.user-settings p {
+    margin: 1rem;
+}
+
+.user-settings p:hover {
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    padding: 0;
+}
+
+.user-settings p a {
+    text-decoration: none;
+}
+
+.line {
+    height: 1px;
+    background-color: #000;
+}
+
+.self {
+    cursor: pointer;
+}
+
+.profile-btn {
+    display: none;
+}
+
+/* Cuando el checkbox está activado, mostrar menú */
+.profile-btn:checked ~ .user-settings {
+    display: block;
 }
 
 /* --- RESPONSIVE --- */

@@ -1,3 +1,10 @@
+export function userData() {
+    /* This function return  */
+    const userData = localStorage.getItem("userData");
+    const data = JSON.parse(userData);
+    return data
+}
+
 export function redirectToLogin() {
     const storedData = localStorage.getItem("userData");
     
