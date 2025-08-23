@@ -44,3 +44,24 @@ body{
 .mainContet {
     display: none;
 }
+
+/*--CARDS STYLES--*/
+.card {
+    box-shadow: -10px 0 10px;
+}
+.card-number {
+    font-size: 30px;
+}
+
+.card-text {
+    margin-bottom: -3px;
+}
+
+.btn {
+    border: none;
+    background-color: rgba(101, 162, 173, 0.72);
+}
+
+.btn:hover {
+    background-color: #4f9fad;
+}
