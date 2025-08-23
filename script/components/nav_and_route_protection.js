@@ -20,7 +20,7 @@ nav.innerHTML = `<nav class="nav-container">
             <ul class="list-nav-container">
                 <li class="list-nav-items"><a href="./dashboard.html">Dashboard</a></li>
                 <li class="list-nav-items"><a href="./courses.html">Courses</a></li>
-                ${data.userType == 'administrador' ? '': `<li class="list-nav-items"><a href="./assignment.html">Asignment</a></li>`}
+                ${data.userType == 'Administrador' ? '': `<li class="list-nav-items"><a href="./assignment.html">Asignment</a></li>`}
                 <li class="list-nav-items"><a href="./progress.html">Progress</a></li>
             </ul>
             <div class="profile-container">
