@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - LMS</title>
+    <link rel="shortcut icon" href="../../storage/img/smartlearnlogobackgroundless.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../styles/component/nav.css">
+    <link rel="stylesheet" href="../styles/users.css">
+</head>
+<body>
+    <div id="nav"></div>
+    <div class="container text-left">
+        <h1 class="courses text-start mt-4">Users</h1>     
+    </div>
+    <main class="container justify-content-center table-responsive">
+        <div class="container text-end btn-container">
+            <button class="btn-filter">Students</button><button class="btn-filter">Teachers</button><button class="btn-filter">Admins</button> <button class="btn btn-primary"><a href="./create-new-user.html" class="create">Create New User</a></button>
+        </div>
+        <div class="table">
+            <table class="table table-hover table-cnt">
+                <thead class="table-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark Doe</td>
+                        <td>mark.doe@gmail.com</td>
+                        <td>Admin</td>
+                        <td>1234567890</td>
+                        <td>Bogota, Colombia</td>
+                        <td><button class="btn btn-sm btn-warning">Edit</button> <button class="btn btn-sm btn-danger">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob Smith</td>
+                        <td>mark.doe@gmail.com</td>
+                        <td>Admin</td>
+                        <td>1234567890</td>
+                        <td>Bogota, Colombia</td>
+                        <td><button class="btn btn-sm btn-warning">Edit</button> <button    class="btn btn-sm btn-danger">Delete</button></td>
+                    </tr>
+                <tbody>
+            </table>
+        </div>
+
+    </main>
+</body>
+<script src="../../script/components/nav_and_route_protection.js"></script>
+</html>
