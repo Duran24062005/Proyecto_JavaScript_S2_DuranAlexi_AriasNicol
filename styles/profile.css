@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: white;
+    color: black;
+    justify-content: center;
+    /*justify-items: center;*/
+    align-items: center;
+    text-align: center
+}
+
+.ventana {
+    background: linear-gradient(white,rgb(153, 153, 153));
+    position: relative;
+    justify-content: center;
+    width: 60vw;
+    height: 80vh;
+    border-radius: 0.7rem;
+    box-shadow:rgba(0, 0, 0, 0.25);
+}
+
+.firstInfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column;
+    
+}
+
+#fotico {
+    width: 4em;
+    height: 4em;
+}
+
+.secondInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.cuadrito {
+    background-color: white;
+    display: block;
+    width: 3em;
+    height: 3em;
+}
+
+.thirdInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem
+    
+}
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
+.academic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
