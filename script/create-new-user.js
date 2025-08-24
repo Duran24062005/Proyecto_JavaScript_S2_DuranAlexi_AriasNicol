@@ -40,7 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             userType: document.getElementById('inputRole').value
         }
-        console.log(create(newUserData));
+        
+        if (await create(newUserData)) {
+            window.location.href = "/pages/users.html";
+        }
         
     })
 });
