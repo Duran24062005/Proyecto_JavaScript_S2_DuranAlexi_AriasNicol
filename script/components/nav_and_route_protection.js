@@ -47,7 +47,7 @@ nav.addEventListener('click', (e) => {
                 name: "",
                 userType: ""
             }));
-            window.location.href = ".././index.html";
+            window.location.href = "../index.html";
         };
     };
 });
