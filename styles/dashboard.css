@@ -3,44 +3,85 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    overflow: hidden;
-}
 
+/* CONTENEDOR DEL LOGO DE INICIO */
 .logoSmartLearn {
-    width: 100vw;
-    height: 100vh;
+    position: fixed;          /* ocupa toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: radial-gradient(rgb(113, 224, 255), rgb(0, 49, 94));
-    align-content: center;
-    text-align: center;
-    animation: desvanecido 2s 8s forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;           /* encima del contenido */
+    animation: fadeOut 1s ease 3.5s forwards; 
+    /* ⬆ la animación dura 1s y empieza a los 3.5s */
 }
 
 #smartLearn {
-    animation: zoomLogo 8s  ;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: zoomLogo 3.5s ease forwards;
 }
 
+/* MAIN inicialmente oculto */
+.mainContet {
+    opacity: 0;
+    animation: showMain 1s ease 4.5s forwards; 
+    /* aparece cuando ya terminó el logo */
+}
+
+/* === ANIMACIONES === */
 @keyframes zoomLogo {
     0% {
         width: 10rem;
         height: 7rem;
     }
     100% {
-        width: 96rem;
-        height: 64rem;
+        width: 40rem;
+        height: 28rem;
     }
 }
 
-@keyframes desvanecido {
-    0% {
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes showMain {
+    to {
         opacity: 1;
     }
-    100% {
-        opacity: 0; display: none;
-    }
 }
 
-.mainContet {
-    display: none;
+/*--CARDS STYLES--*/
+.card {
+    box-shadow: -10px 0 10px;
+}
+.card-number {
+    font-size: 30px;
+}
+
+.card-text {
+    margin-bottom: -3px;
+}
+
+.btn {
+    border: none;
+    background-color: rgba(101, 162, 173, 0.72);
+}
+
+.btn:hover {
+    background-color: #4f9fad;
+}
+
+/*GRAPHIC CONTAINER*/
+.graphic-container {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    box-shadow: -10px 0 10px;
+    border-radius: 20px;
 }

@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conta {
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #fff, #d9d9d9);
+    box-shadow: -10px 0 10px;
+}
+
+.btn {
+    background-color: rgba(101, 162, 173, 0.72);
+    border: none;
+}
+
+.btn:hover {
+    background-color: #4f9fad;
+}

@@ -4,7 +4,7 @@ const data = JSON.parse(userData);
 if (!data.name && !data.userType) {
         // Si no hay datos, podría redirigir al login
         alert("No hay datos de usuario, redirigiendo al login...");
-        window.location.href = "/index.html";
+        window.location.href = "../index.html";
     }
 
 const  nav = document.getElementById('nav');
@@ -20,7 +20,7 @@ nav.innerHTML = `<nav class="nav-container">
             <ul class="list-nav-container">
                 <li class="list-nav-items"><a href="./dashboard.html">Dashboard</a></li>
                 <li class="list-nav-items"><a href="./courses.html">Courses</a></li>
-                ${data.userType == 'administrador' ? '': `<li class="list-nav-items"><a href="./assignment.html">Asignment</a></li>`}
+                ${data.userType == 'Administrador' ? '': `<li class="list-nav-items"><a href="./assignment.html">Asignment</a></li>`}
                 <li class="list-nav-items"><a href="./progress.html">Progress</a></li>
             </ul>
             <div class="profile-container">
@@ -47,7 +47,7 @@ nav.addEventListener('click', (e) => {
                 name: "",
                 userType: ""
             }));
-            window.location.href = ".././index.html";
+            window.location.href = "../index.html";
         };
     };
 });
