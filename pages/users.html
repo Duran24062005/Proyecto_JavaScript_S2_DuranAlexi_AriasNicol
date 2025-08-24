@@ -16,7 +16,7 @@
     </div>
     <main class="container justify-content-center table-responsive">
         <div class="container text-end btn-container">
-            <button class="btn-filter">Students</button><button class="btn-filter">Teachers</button><button class="btn-filter">Admins</button> <button class="btn btn-primary"><a href="./create-new-user.html" class="create">Create New User</a></button>
+            <button class="btn-filter" id="filter-stn">Students</button><button class="btn-filter" id="filter-tch">Teachers</button><button class="btn-filter" id="filter-adm">Admins</button> <button class="btn btn-primary"><a href="./create-new-user.html" class="create">Create New User</a></button>
         </div>
         <div class="table">
             <table class="table table-hover table-cnt">
@@ -31,7 +31,7 @@
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="table-body">
                     <tr>
                         <th scope="row">1</th>
                         <td>Mark Doe</td>
@@ -57,4 +57,5 @@
     </main>
 </body>
 <script src="../script/components/nav_and_route_protection.js"></script>
+<script src="../script/users.js"></script>
 </html>
