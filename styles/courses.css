@@ -13,3 +13,24 @@
 .card {
     box-shadow: -10px 0 10px;
 }
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 10px;
+}
