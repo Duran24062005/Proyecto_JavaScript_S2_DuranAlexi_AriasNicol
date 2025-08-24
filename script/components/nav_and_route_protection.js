@@ -1,11 +1,11 @@
 const userData = localStorage.getItem("userData");
 const data = JSON.parse(userData);
 
-/*if (!data.name && !data.userType) {
+if (!data.name && !data.userType) {
         // Si no hay datos, podría redirigir al login
         alert("No hay datos de usuario, redirigiendo al login...");
-        window.location.href = "/index.html";
-    }*/
+        window.location.href = "../index.html";
+    }
 
 const  nav = document.getElementById('nav');
 nav.innerHTML = `<nav class="nav-container">
