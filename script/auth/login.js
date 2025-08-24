@@ -36,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     }));
                     // Ejemplo de redirección después de login
                     window.location.href = "./pages/dashboard.html";
+                } else {
+                    errorMessage.innerHTML = '<p style="color: red" class="text-center"  class="error-message" role="alert" aria-live="assertive">Usuario o contraseña incorrectos.</p>';
                 }
             });
         })

@@ -3,12 +3,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const storedData = localStorage.getItem("userData");
     const userData = JSON.parse(storedData);
+    const userName = document.getElementById('userName');
     const coursesElement = document.getElementById("courses-n");
     const activeCoursesElement = document.getElementById("active-courses-n");
     const teachersElement = document.getElementById("teachers-n");
     const activesTeachersElement = document.getElementById("actives-teachers-n");
     const studentsElement = document.getElementById("students-n");
     const activesStudentsElement = document.getElementById("actives-students-n");
+
+    userName.textContent = userData.name;
+    userName.style.color = 'rgba(24, 186, 214, 0.72)';
+    if (userData.name.toLowerCase() == 'alexi') {
+        userName.style.borderBottom = '2px solid';
+    }
 
     async function fetchUsers() {
         const res = await fetch('https://68a7a3b6bb882f2aa6dc2c35.mockapi.io/users/');
