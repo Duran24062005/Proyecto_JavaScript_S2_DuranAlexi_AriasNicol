@@ -11,13 +11,10 @@
 }
 
 .card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: -10px 0 10px;
-}
-
-.card {
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
