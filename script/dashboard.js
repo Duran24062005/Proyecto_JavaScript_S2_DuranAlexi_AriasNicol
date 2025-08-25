@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const activesTeachersElement = document.getElementById("actives-teachers-n");
     const studentsElement = document.getElementById("students-n");
     const activesStudentsElement = document.getElementById("actives-students-n");
-    let inactivesCourses = 0;
+    let activeCourses = 0;
     let inactiveStudents = 0;
     let inactiveTeacher = 0;
 
@@ -52,23 +52,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     usersByPrueb.forEach(us => {
         if (us.courses != undefined) {
             us.courses.forEach(c => {
-                if (c.status !== undefined) {
-                    console.log(c.status);
-                    inactivesCourses += c.status.toLowerCase() == 'activo' ? 0 : 1;
+                if (c.status && c.status.toLowerCase() === "activo") {
+                    activeCourses++;
                 }
-        })
-
-
-            //inactiveTeacher += us.userType.toLowerCase() == 'teacher' || e.userType.toLowerCase() == 'docente' && us.status.toLowerCase() == 'activo' ? 0 : 1;
-            //inactiveStudents += us.userType.toLowerCase() == 'student' || e.userType.toLowerCase() == 'estudiante' && us.status.toLowerCase() == 'activo' ? 0 : 1;
-            
+            });
         }
+
+        if ((us.userType.toLowerCase() === "teacher" || us.userType.toLowerCase() === "docente")) {
+            inactiveTeacher += us.status === "activo" ? 1 : 0;
+        }
+        if ((us.userType.toLowerCase() === "student" || us.userType.toLowerCase() === "estudiante")) {
+            inactiveStudents += us.status === "activo" ? 1 : 0;
+        }
+        
     });
     
 
-    activeCoursesElement.textContent = inactivesCourses;
-    activesTeachersElement.textContent = 'l';
-    activesStudentsElement.textContent = 'l';
+    activeCoursesElement.textContent = activeCourses;
+    activesTeachersElement.textContent = inactiveTeacher;
+    activesStudentsElement.textContent = inactiveStudents;
 
     if (!userData.name && !userData.userType) {
         // Si no hay datos, podría redirigir al login
@@ -76,11 +78,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "/index.html";
         return;
     }
-
-
-    // Muestra en consola
-    console.log("Nombre:", userData.name);
-    console.log("Tipo de usuario:", userData.userType);
 
 });
 `<div class="row">
