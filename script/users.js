@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <td>${user.userType}</td>
                 <td>${user.phone}</td>
                 <td>${user.location.city}, ${user.location.country}</td>
+                <td>${user.status}</td>
                 <td>
                     <button class="btn btn-sm btn-warning">Edit</button>
                     <button class="btn btn-sm btn-danger">Delete</button>

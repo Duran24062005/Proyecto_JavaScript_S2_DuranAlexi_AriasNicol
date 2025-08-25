@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 city: document.getElementById('inputCity').value,
                 country: document.getElementById('inputCountry').value
             },
-            userType: document.getElementById('inputRole').value
+            userType: document.getElementById('inputRole').value,
+            status: 'activo'
         }
         
         if (await create(newUserData)) {
