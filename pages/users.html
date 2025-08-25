@@ -16,7 +16,7 @@
     </div>
     <main class="container justify-content-center table-responsive">
         <div class="container text-end btn-container">
-            <button class="btn-filter" id="filter-stn">Students</button><button class="btn-filter" id="filter-tch">Teachers</button><button class="btn-filter" id="filter-adm">Admins</button> <button class="btn btn-primary"><a href="./create-new-user.html" class="create">Create New User</a></button>
+            <button class="btn-filter" id="all-stn">All</button><button class="btn-filter" id="filter-stn">Students</button><button class="btn-filter" id="filter-tch">Teachers</button><button class="btn-filter" id="filter-adm">Admins</button> <button class="btn btn-primary"><a href="./create-new-user.html" class="create">Create New User</a></button>
         </div>
         <div class="table">
             <table class="table table-hover table-cnt">
@@ -56,7 +56,80 @@
         </div>
 
     </main>
+    <!-- MODAL EDIT -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Editar Usuario</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form id="editUserForm">
+            <input type="hidden" id="editUserId">
+
+            <div class="mb-3">
+                <label for="editName" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="editName">
+            </div>
+
+            <div class="mb-3">
+                <label for="editEmail" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="editEmail">
+            </div>
+
+            <div class="mb-3">
+                <label for="editRole" class="form-label">Rol</label>
+                <input type="text" class="form-control" id="editRole">
+            </div>
+
+            <div class="mb-3">
+                <label for="editPhone" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="editPhone">
+            </div>
+
+            <div class="mb-3">
+                <label for="editLocation" class="form-label">Ubicación</label>
+                <input type="text" class="form-control" id="editLocation">
+            </div>
+
+            <!-- NUEVO CAMPO ESTADO -->
+            <div class="mb-3">
+                <label for="editStatus" class="form-label">Estado</label>
+                <select class="form-select" id="editStatus">
+                    <option value="active">Activo</option>
+                    <option value="inactive">Inactivo</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- MODAL DELETE -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="deleteModalLabel">Eliminar Usuario</h5><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            ¿Estás seguro de eliminar este usuario?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-danger" id="confirmDelete">Aceptar</button>
+        </div>
+        </div>
+    </div>
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 <script src="../script/components/nav_and_route_protection.js"></script>
 <script src="../script/users.js"></script>
 </html>
