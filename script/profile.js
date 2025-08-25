@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', async() => {
     const userData = localStorage.getItem("userData");
     const data = JSON.parse(userData);
+    const headerInfo = document.getElementById('header-info');
     const userName = document.getElementById('user-name');
     const userType = document.getElementById('user-description');
     const infoContainer = document.getElementById('info-container');
@@ -17,8 +18,17 @@ document.addEventListener('DOMContentLoaded', async() => {
     // console.log(users);
     let user = users.find(u => u.id === data.id);
     // console.log(typeof users);
-    userName.textContent = user.name;
-    userType.textContent = user.userType;
+    if(user.img) {
+        headerInfo.innerHTML = `
+            <img src="${user.img}" alt="img of user ${user.name}" class="img-user">
+            <h1 class="mt-2" id="user-name">${user.name}</h1>
+            <p class="description" id="user-description">${user.userType}</p>`;
+    } else {
+        headerInfo.innerHTML = `
+            <img src="../storage/img/profile-img.png" alt="user img" class="img-user">
+            <h1 class="mt-2" id="user-name">${user.name}</h1>
+            <p class="description" id="user-description">${user.userType}</p>`;
+    }
     infoContainer.innerHTML = `<h3>Personal Information</h3>
                     <div class="col">
                         <div class="container">
