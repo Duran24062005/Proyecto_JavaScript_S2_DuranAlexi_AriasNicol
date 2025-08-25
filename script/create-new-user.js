@@ -43,7 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         if (await create(newUserData)) {
-            window.location.href = "/pages/users.html";
+            newUserData.name.value = '';
+            newUserData.email.value = '';
+            newUserData.phone.value = '';
+            newUserData.password.value = '';
+            newUserData.location.city.value = '';
+            newUserData.location.country.value = '';
+            newUserData.userType.value = '';
+            window.location.href = "./users.html";
         }
         
     })
