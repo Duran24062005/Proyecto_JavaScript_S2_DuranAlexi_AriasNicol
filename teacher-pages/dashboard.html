@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="../storage/img/smartlearnlogobackgroundless.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/dashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/component/nav.css">
+</head>
 </head>
 <body>
-    
+    <div id="nav"></div>
+    <div id="header" class="header">
+    </div>
+    <section id="first-part" class="firstPart">
+        <div id="tipo" class="tipo"></div>
+        <div id="user" class="user"></div>
+        <p>Welcome to your home portal</p>
+    </section>
+    <section id="second-part" class="secondPart">
+        <div id="active-courses" class="cuadrito">
+
+        </div>
+        <div id="pending-task" class="cuadrito">
+            
+        </div>
+        <div id="percent" class="cuadrito">
+            
+        </div>
+    </section>
+    <div class="container text-left">
+        <h2 class="courses text-start mt-4">Courses</h2>
+    </div>
+    <div class="container">
+        <div class="row gap-5 justify-content-center">
+            <div class="col card mb-3" style="max-width: 540px;">
+                <div class="row">
+                    <div class="col-md-4">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSv_zu7LWdewopCsrWUQS2g10-KhQN7ofTe8q_on0Nn06TvOeHF" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                    <img src="https://images.seeklogo.com/logo-png/49/1/fastapi-logo-png_seeklogo-499530.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                    <img src="https://existek3-838c.kxcdn.com/wp-content/uploads/2020/07/4-1.webp" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="../script/components/nav_and_route_protection.js"></script>
 </html>
