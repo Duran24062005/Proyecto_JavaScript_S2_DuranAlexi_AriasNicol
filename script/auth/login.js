@@ -33,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem("userData", JSON.stringify({
                         name: e.name,
                         userType: e.userType,
-                        id: e.id
+                        id: e.id,
+                        img: e.img
                     }));
                     // Ejemplo de redirección después de login
                     window.location.href = "./pages/dashboard.html";
