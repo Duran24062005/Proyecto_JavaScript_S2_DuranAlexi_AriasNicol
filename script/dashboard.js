@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // 2. Filtrar solo docentes que tengan cursos
     const teachers = users.filter(user => user.userType === "Docente" && user.courses);
     // console.log(teachers[0].courses);
-    teachers[0].courses.forEach(e => {
+    teachers[1].courses.forEach(e => {
         // console.log(e);
         coursesContainer.innerHTML += `<div class="col-md-3 col-sm-12">
                         <div class="card h-100 shadow-sm">
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">${e.title}</h5>
                                 <p class="card-text">${e.description}</p>
-                                <p class="text-muted small">👨‍🏫 ${e.teacher}</p>
+                                <p class="text-muted small">👨‍🏫 ${teachers[0].name}</p>
                                 <div class="progress mb-2">
                                     <div class="progress-bar" role="progressbar" 
                                          style="width: ${(e.lessonsCompleted / e.lessons) * 100}%;">

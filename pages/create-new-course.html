@@ -14,53 +14,37 @@
     <main class="container conta mt-4">
          <div class="form-card">
       <div class="text-center mb-4">
-        <h1>Create New User</h1>
-        <p class="text-muted">Fill out the form below to add a new user</p>
+        <h1>Create New Course</h1>
+        <p class="text-muted">Fill out the form below to add a new course</p>
       </div>
 
       <form class="px-5 py-2">
         <div class="mb-3">
-          <label for="inputName" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="inputName" placeholder="Enter full name">
+          <label for="inputTitle" class="form-label">Titulo</label>
+          <input type="text" class="form-control" id="inputTitle" placeholder="Enter full name of course">
         </div>
         <div class="mb-3">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" placeholder="Enter Emal">
+          <label for="inputDescription" class="form-label">Description</label>
+          <input type="text" class="form-control" id="inputDescription" placeholder="Enter Description">
         </div>
         <div class="mb-3">
-          <label for="inputPhone" class="form-label">Phone</label>
-          <input type="text" class="form-control" id="inputPhone" placeholder="+57 300 123 4567">
+          <label for="inputLessons" class="form-label">Lecciones</label>
+          <input type="number" class="form-control" id="inputLessons" placeholder="Enter lessons number(exp): 67">
         </div>
         <div class="mb-3">
-          <label for="inputPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword" placeholder="Enter a secure password">
+          <label for="inputImgUrl" class="form-label">Url de la imagen</label>
+          <input type="text" class="form-control" id="inputImgUrl" placeholder="Enter a url">
         </div>
         <div class="mb-3">
-          <label for="inputRole" class="form-label">Role</label>
-          <select id="inputRole" class="form-select">
-            <option value="">Select role...</option>
-            <option value="Estudiante">Estudiante</option>
-            <option value="Docente">Docente</option>
-            <option value="Administrador">Administrador</option>
-          </select>
-        </div>
-        <div class="form-section-title text-center my-4">Location</div>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="inputCity" class="form-label">City</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="Enter city">
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="inputCountry" class="form-label">Country</label>
-            <input type="text" class="form-control" id="inputCountry" placeholder="Enter country">
-          </div>
+          <label for="inputId" class="form-label">Teacher ID</label>
+          <input type="number" class="form-control" id="inputId" placeholder="Enter teacher ID(examp): 67">
         </div>
         <div class="text-center">
-          <button type="submit" class="btn btn-primary w-100">Create User</button>
+          <button type="submit" class="btn btn-primary w-100">Create Course</button>
         </div>
     </form>
     </main>
 </body>
 <script src="../script/components/nav_and_route_protection.js"></script>
-<script src="../script/create-new-user.js"></script>
+<script src="../script/create-new-course.js"></script>
 </html>

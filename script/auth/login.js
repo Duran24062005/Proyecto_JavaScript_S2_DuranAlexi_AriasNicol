@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     }));
                     // Ejemplo de redirección después de login
                     window.location.href = "./pages/dashboard.html";
-                } else {
+                }
+                if (e.name.toLowerCase() !== name.toLowerCase() && e.password.toLowerCase() !== password.toLowerCase()) {
                     errorMessage.innerHTML = '<p style="color: red" class="text-center"  class="error-message" role="alert" aria-live="assertive">Usuario o contraseña incorrectos.</p>';
                 }
             });
