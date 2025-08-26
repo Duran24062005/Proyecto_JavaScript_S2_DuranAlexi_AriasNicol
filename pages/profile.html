@@ -10,30 +10,41 @@
 </head>
 <body>
     <div id="nav"></div>
-    <div id="ventana" class="ventana">
-        <div id="first-info" class="firstInfo">
-           
-        </div>
-        <div id="second-info" class="secondInfo">
-            <div id="rect-1" class="cuadrito">
-                
-            </div>
-            <div id="rect-2" class="rect2">
-
-            </div>
-            <div id="rect-3" class="rect3">
-
+    <main class="container ventana mt-4">
+        <div class="container header">
+            <div class="container mt-6 mb-5" id="header-info">
+                <img src="../storage/img/profile-img.png" alt="user img" class="img-user">
+                <h1 class="mt-2" id="user-name">John Doe</h1>
+                <p class="description" id="user-description">Administrador</p>
             </div>
         </div>
-        <div id="third-info" class="thirdInfo">
-            <div id="personal" class="personal">
-
+        <section class="container section">
+            <div class="container column-container">
+                <div class="row">
+                    <div class="circle circle-left">
+                        <p>Courses</p>
+                        <h2>7</h2>
+                        <p>Completed</p>
+                    </div>
+                    <div class="circle circle-center">
+                        <p>Courses</p>
+                        <h2>7</h2>
+                        <p>Completed</p>
+                    </div>
+                    <div class="circle circle-rigth">
+                        <p>Certificates</p>
+                        <h2>7</h2>
+                        <p>Earned</p>
+                    </div>
+                </div>
             </div>
-            <div id="academic" class="academic">
-
+            <div class="container mt-4">
+                <div class="row" id="info-container">
+                    
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 <script src="../script/components/nav_and_route_protection.js"></script>
 <script src="../script/profile.js"></script>
