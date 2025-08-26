@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const activesTeachersElement = document.getElementById("actives-teachers-n");
     const studentsElement = document.getElementById("students-n");
     const activesStudentsElement = document.getElementById("actives-students-n");
+    const coursesContainer = document.getElementById("courses-container");
     let activeCourses = 0;
     let inactiveStudents = 0;
     let inactiveTeacher = 0;
@@ -78,6 +79,36 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "/index.html";
         return;
     }
+
+    // Todos los usuarios
+    let users = await fetchUsers();
+    // console.log(users);
+
+    // 2. Filtrar solo docentes que tengan cursos
+    const teachers = users.filter(user => user.userType === "Docente" && user.courses);
+    // console.log(teachers[0].courses);
+    teachers[0].courses.forEach(e => {
+        // console.log(e);
+        coursesContainer.innerHTML += `<div class="col-md-3 col-sm-12">
+                        <div class="card h-100 shadow-sm">
+                            <img src="${e.image}" class="card-img-top" alt="${e.title}">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">${e.title}</h5>
+                                <p class="card-text">${e.description}</p>
+                                <p class="text-muted small">👨‍🏫 ${e.teacher}</p>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar" role="progressbar" 
+                                         style="width: ${(e.lessonsCompleted / e.lessons) * 100}%;">
+                                        ${e.lessonsCompleted}/${e.lessons}
+                                    </div>
+                                </div>
+                                <!--<button class="btn btn-outline-primary mt-auto">Continue Learning</button>-->
+                            </div>
+                        </div>
+                    </div>`;
+    })
+    
+    
 
 });
 `<div class="row">
