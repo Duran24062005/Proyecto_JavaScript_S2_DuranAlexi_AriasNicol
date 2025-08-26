@@ -18,7 +18,7 @@
     <img src="" alt="">
     <div id="ventana" class="ventana">
         <h1>Create New Course</h1>
-        <form action="" method="post" target="_blank">
+        <form id="new-assignment" method="post" target="_blank">
             <div>
                 <strong>Name</strong> <br> <input type="text" placeholder="Escribe aquí tu nombre"> <br>
                 <!--Cargar una foto-->
@@ -37,11 +37,12 @@
                 <h2>Duration</h2>
                 <strong> Fecha de Inicio </strong> <br> <input type="date" placeholder="dd / mmm / aaaa"> <br>
                 <strong> Fecha de Terminación</strong> <br> <input type="date" placeholder="dd / mmm / aaaa"> <br>
-        </form>
-        <div >
-            <input type="button" value="">
+            <div id="btns - destiny">
+            <input type="reset" value="cancel">
             <input type="button" value="submit">
-        </div>
+            </div>
+        </form>
+        
 </body>
 <script src="../script/components/nav_and_route_protection.js"></script>
 <script src="../script/create-new-course.js"></script>
