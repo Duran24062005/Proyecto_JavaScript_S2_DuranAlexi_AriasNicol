@@ -26,24 +26,34 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(name, password);
 
         fetchUsers().then(users => {
-            console.log(users);
-            users.forEach(e => {
-                if (e.name.toLowerCase() === name.toLowerCase() && e.password.toLowerCase() === password.toLowerCase()) {
-                    // Guardar en localStorage
-                    localStorage.setItem("userData", JSON.stringify({
-                        name: e.name,
-                        userType: e.userType,
-                        id: e.id,
-                        img: e.img
-                    }));
-                    // Ejemplo de redirección después de login
+            const user = users.find(e => 
+                e.name.toLowerCase() === name.toLowerCase() &&
+                e.password.toLowerCase() === password.toLowerCase()
+            );
+
+            if (user) {
+                // Guardar en localStorage
+                localStorage.setItem("userData", JSON.stringify({
+                    name: user.name,
+                    userType: user.userType,
+                    id: user.id,
+                    img: user.img
+                }));
+
+                // Redirección según el rol
+                if (user.userType.toLowerCase() === 'administrador' || user.userType.toLowerCase() === 'admin') {
                     window.location.href = "./pages/dashboard.html";
+                } else if (user.userType.toLowerCase() === 'docente' || user.userType.toLowerCase() === 'teacher') {
+                    window.location.href = "./teacher-pages/dashboard.html";
+                } else if (user.userType.toLowerCase() === 'estudiante' || user.userType.toLowerCase() === 'student') {
+                    window.location.href = "./student-module/dashboard.html";
                 }
-                if (e.name.toLowerCase() !== name.toLowerCase() && e.password.toLowerCase() !== password.toLowerCase()) {
-                    errorMessage.innerHTML = '<p style="color: red" class="text-center"  class="error-message" role="alert" aria-live="assertive">Usuario o contraseña incorrectos.</p>';
-                }
-            });
-        })
+
+            } else {
+                errorMessage.innerHTML = '<p style="color: red" class="text-center error-message" role="alert" aria-live="assertive">Usuario o contraseña incorrectos.</p>';
+            }
+        });
+
         
 
         // Limpia el input despues de recibir el dato

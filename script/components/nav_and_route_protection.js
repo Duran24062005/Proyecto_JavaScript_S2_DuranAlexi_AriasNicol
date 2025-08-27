@@ -24,7 +24,7 @@ nav.innerHTML = `<nav class="nav-container">
                 <li class="list-nav-items"><a href="./progress.html">Progress</a></li>
             </ul>
             <div class="profile-container">
-                <img src="${data.img ? data.img : data.img}" alt="Foto de ${data.name}" class="profile-img">
+                <img src="${data.img ? data.img : '../storage/img/profile-img.png'}" alt="Foto de ${data.name}" class="profile-img">
                 <p class="name">${data.userType.toLowerCase() == 'administrador' ? `Admin: ` + data.name : data.name }</p>
                 <label for="profile_btn" class="profile_btn"><img src="../storage/img/ArrowDown.png" alt="" class="img-profile-btn"></label>
                 <input type="checkbox" name="" id="profile_btn" class="profile-btn">
