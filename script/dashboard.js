@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let inactiveTeacher = 0;
 
     userName.textContent = userData.name;
-    userName.style.color = 'rgba(24, 186, 214, 0.72)';
+    userName.style.color = 'rgba(24, 186, 214, 0.70)';
     if (userData.name.toLowerCase() == 'alexi duran') {
         userName.style.borderBottom = '2px solid';
     }
