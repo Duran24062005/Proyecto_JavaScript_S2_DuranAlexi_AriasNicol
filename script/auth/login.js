@@ -2,18 +2,18 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("loginForm");
-    const nameInput = document.getElementById("inputName");
+    const emailInput = document.getElementById("inputEmail");
     const inputPassword = document.getElementById("inputPassword");
     const errorMessage = document.getElementById("errorMessage");
 
     form.addEventListener("submit", (e) => {
         e.preventDefault(); // Evita que recargue la página
 
-        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
         const password = inputPassword.value;
 
         // Validación simple
-        if (!name || !password) {
+        if (!email || !password) {
             errorMessage.textContent = "Por favor, complete todos los campos.";
             return;
         }
@@ -23,27 +23,37 @@ document.addEventListener("DOMContentLoaded", () => {
             let data = await res.json();
             return data;
         }
-        console.log(name, password);
+        console.log(email, password);
 
         fetchUsers().then(users => {
-            console.log(users);
-            users.forEach(e => {
-                if (e.name.toLowerCase() === name.toLowerCase() && e.password.toLowerCase() === password.toLowerCase()) {
-                    // Guardar en localStorage
-                    localStorage.setItem("userData", JSON.stringify({
-                        name: e.name,
-                        userType: e.userType,
-                        id: e.id,
-                        img: e.img
-                    }));
-                    // Ejemplo de redirección después de login
+            const user = users.find(e => 
+                e.email.toLowerCase() === email.toLowerCase() &&
+                e.password.toLowerCase() === password.toLowerCase()
+            );
+
+            if (user) {
+                // Guardar en localStorage
+                localStorage.setItem("userData", JSON.stringify({
+                    name: user.name,
+                    userType: user.userType,
+                    id: user.id,
+                    img: user.img
+                }));
+
+                // Redirección según el rol
+                if (user.userType.toLowerCase() === 'administrador' || user.userType.toLowerCase() === 'admin') {
                     window.location.href = "./pages/dashboard.html";
+                } else if (user.userType.toLowerCase() === 'docente' || user.userType.toLowerCase() === 'teacher') {
+                    window.location.href = "./teacher-pages/dashboard.html";
+                } else if (user.userType.toLowerCase() === 'estudiante' || user.userType.toLowerCase() === 'student') {
+                    window.location.href = "./student-module/dashboard.html";
                 }
-                if (e.name.toLowerCase() !== name.toLowerCase() && e.password.toLowerCase() !== password.toLowerCase()) {
-                    errorMessage.innerHTML = '<p style="color: red" class="text-center"  class="error-message" role="alert" aria-live="assertive">Usuario o contraseña incorrectos.</p>';
-                }
-            });
-        })
+
+            } else {
+                errorMessage.innerHTML = '<p style="color: red" class="text-center error-message" role="alert" aria-live="assertive">Usuario o contraseña incorrectos.</p>';
+            }
+        });
+
         
 
         // Limpia el input despues de recibir el dato
