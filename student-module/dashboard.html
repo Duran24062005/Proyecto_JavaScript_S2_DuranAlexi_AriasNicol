@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard LMS</title>
+    <link rel="shortcut icon" href="../storage/img/smartlearnlogobackgroundless.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link rel="stylesheet" href="../styles/component/nav.css">
+</head>
+<body>
+    <!--Initial Animation-->
+    <!--<div class="logoSmartLearn">
+        <img id="smartLearn" src="../storage/img/smartlearnlogobackgroundless.png" alt="">
+    </div>-->
+    <main class="mainContent" id="main-content">
+        <!--NAVEGATOR-->
+        <div id="nav"></div>
+        <header class="container mt-4">
+            <h1 id="userName">John Doe</h1>
+            <p>Welcome to your home portal</p>
+        </header>
+        <!--CARDS CONTAINER-->
+        <section class="container text-center sect-content pt-4">
+            <div class="container text-center" id="cards-container">
+                <div class="row">
+                    <div class="col mb-3">
+                        <div class="card">
+                            <div class="card-body container">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="card-text card-number" id="courses-n">30</p>
+                                        <p class="card-text">Courses</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text card-number" id="active-courses-n">40</p>
+                                        <p class="card-text">Actives</p>
+                                    </div>
+                                </div>
+                                
+                                <a href="./courses.html" class="btn btn-primary mt-4">Courses</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <div class="card-body container">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="card-text card-number" id="teachers-n">30</p>
+                                        <p class="card-text">Teachers</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text card-number" id="actives-teachers-n">10</p>
+                                        <p class="card-text">Actives</p>
+                                    </div>
+                                </div>
+                                
+                                <a href="./users.html" class="btn btn-primary mt-4">Teachers</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <div class="card-body container">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="card-text card-number" id="students-n">30</p>
+                                        <p class="card-text">Students</p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text card-number" id="actives-students-n">28</p>
+                                        <p class="card-text">Actives</p>
+                                    </div>
+                                </div>
+                                
+                                <a href="./users.html" class="btn btn-primary mt-4">Students</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--CARDS TO DASHBOARD-->
+        <section class="container text-center sect-content pt-4">
+            <div class="container text-left">
+                <h2 class="courses text-start mt-4">Courses</h2>
+            </div>
+            <div class="row gap-4 justify-content-center" id="courses-container">
+                    
+            </div>
+            <article class="container graphic-container">
+                <h2 class="text-start mb-4">Overall average</h2>
+                <div class="graphic">
+                    <img src="https://datavizcatalogue.com/ES/metodos/images/top_images/SVG/grafica_de_linea.svg" alt="" class="img-graphics">
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script type="module" src="../script/dashboard.js"></script>
+<script src="../script/components/nav_and_route_protection.js"></script>
+</html>
