@@ -113,4 +113,4 @@ El LMS se estructura en módulos funcionales claramente definidos, orientados a 
 
 - 🚀 [Deploy](https://duran24062005.github.io/Proyecto_JavaScript_S2_DuranAlexi_AriasNicol/)
 
--[Support Video](https://drive.google.com/drive/folders/1XgprY6rZn9VALJKybfHxFHocZq92R_2G?usp=sharing)
+- [Support Video](https://drive.google.com/drive/folders/1XgprY6rZn9VALJKybfHxFHocZq92R_2G?usp=sharing)
