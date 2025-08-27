@@ -2,18 +2,18 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("loginForm");
-    const nameInput = document.getElementById("inputName");
+    const emailInput = document.getElementById("inputEmail");
     const inputPassword = document.getElementById("inputPassword");
     const errorMessage = document.getElementById("errorMessage");
 
     form.addEventListener("submit", (e) => {
         e.preventDefault(); // Evita que recargue la página
 
-        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
         const password = inputPassword.value;
 
         // Validación simple
-        if (!name || !password) {
+        if (!email || !password) {
             errorMessage.textContent = "Por favor, complete todos los campos.";
             return;
         }
@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
             let data = await res.json();
             return data;
         }
-        console.log(name, password);
+        console.log(email, password);
 
         fetchUsers().then(users => {
             const user = users.find(e => 
-                e.name.toLowerCase() === name.toLowerCase() &&
+                e.email.toLowerCase() === email.toLowerCase() &&
                 e.password.toLowerCase() === password.toLowerCase()
             );
 
