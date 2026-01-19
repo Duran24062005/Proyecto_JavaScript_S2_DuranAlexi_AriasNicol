@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
             return data;
         }
         console.log(email, password);
-
+        // Getting all users from mockapi, for demo purposes
+        // In a real app, you would send a request to your backend to verify credentials
         fetchUsers().then(users => {
             const user = users.find(e => 
                 e.email.toLowerCase() === email.toLowerCase() &&
